@@ -1,8 +1,8 @@
 catCoder.factory('CatFactory', function CatFactory() {
   var factory = {};
-  factory.users = [];
+  factory.user = [];
 
-  factory.addUser = function(attributes) {
+  factory.buildUser = function() {
     points = 0;
     pointsForUserName = {
       Bob: 1,
@@ -35,13 +35,19 @@ catCoder.factory('CatFactory', function CatFactory() {
       Google: 98
     };
 
-    points += pointsForUserName[attributes.userName];
-    points += pointsForGender[attributes.gender];
-    points += pointsForSpirit[attributes.spirit];
-    points += pointsForTypeStyle[attributes.typeStyle];
-    points += pointsForOs[attributes.os];
+    points += pointsForUserName[factory.username];
+    points += pointsForGender[factory.gender];
+    points += pointsForSpirit[factory.userSpirit];
+    points += pointsForTypeStyle[factory.userType];
+    points += pointsForOs[factory.userOs];
 
+    var newUser = { name: factory.username, id: factory.user.length +1, points: points}
+    factory.user.push(newUser);
+    factory.username = null;
+    console.log(factory.user);
+    return newUser;
   };
 
   return factory;
+
 });
