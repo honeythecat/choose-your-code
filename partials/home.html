@@ -1,0 +1,47 @@
+<h1>Choose your adventure</h1>
+
+<div class="player">
+  <form ng-submit="CatFactory.addUser()" class="form-inline" role="form">
+    <div class="form-group">
+      <select ng-model="CatFactory.username" class="form-control">
+        <option value="Bob">Bob</option>
+        <option value="Bob2">Bob2</option>
+        <option value="Bob3">Bob3</option>
+        <option value="Bob4">Bob4</option>
+        <option value="Bob5">Bob5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select ng-model="CatFactory.gender" class="form-control">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select ng-model="CatFactory.userSpirit" class="form-control">
+        <option value="Feral">Feral Cat</option>
+        <option value="Fancy">Fancy Cat</option>
+        <option value="Nyan">Nyan Cat</option>
+        <option value="Code">Code-Dependent Cat</option>
+        <option value="Newbie">Newbie Kitten</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select ng-model="CatFactory.userType" class="form-control">
+        <option value="Hunt">Hunt and Peck</option>
+        <option value="Touch">Touch Type</option>
+        <option value="Bang">Banging Head Against Keyboard</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select ng-model="CatFactory.userOs" class="form-control">
+        <option value="Windows">Windows</option>
+        <option value="Mac">Mac</option>
+        <option value="Linux">Linux</option>
+        <option value="Google">Google Chromium</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>

@@ -10,12 +10,11 @@ Topic/ theme: learning to code!
             - nyan cat [256]
             - code-dependant cat [405]
             - newbie kitten [404]
-        3. favorite food (type in) [scrabble]
-        4. typing style (select from options)
+        3. typing style (select from options)
             - hunt and peck [50]
             - banging head against keyboard [100]
             - home row [101]
-        5. os (select from options)
+        4. os (select from options)
             - pc (windows) [84]
             - mac (os x) [-76]
             - linux [92]
