@@ -44,7 +44,7 @@ catCoder.factory('CatFactory', function CatFactory() {
     var newUser = { name: factory.username, id: factory.user.length +1, points: points}
     factory.user.push(newUser);
     factory.username = null;
-    console.log(factory.user);
+    // console.log(factory.user);
     return newUser;
   };
 
