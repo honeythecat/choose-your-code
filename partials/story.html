@@ -1,8 +1,10 @@
 <div>
   <h1>Your name: {{user.name}} </h1>
   <h1>Current point total: {{user.points}}</h1>
+</div>
 
-  <h3>You look around the room, unsure of what your future holds. What you do know is what is you are hungry, poor, and bored. You have an empty kitchen with ketchup in the fridge, a laptop with little battery life, stolen wifi, and a bank account that is three dollars away from being overdrawn. Do you: <a ng-click="subtractPoints()" ui-sref="story.chapter1({option: kitchen})">Go to the kitchen </a> and make ketchup soup or <a ng-click="addPoints()" ui-sref="story.chapter1({option: computer})">go online</a> to research possible careers?
+<div ng-hide="Chapter1">
+  <h3>You look around the room, unsure of what your future holds. What you do know is what is you are hungry, poor, and bored. You have an empty kitchen with ketchup in the fridge, a laptop with little battery life, stolen wifi, and a bank account that is three dollars away from being overdrawn. Do you: <a ng-click="subtractPoints(); Chapter1 = true; kitchen = true" ui-sref="story.chapter1({option: 'kitchen'})">Go to the kitchen </a> and make ketchup soup or <a ng-click="addPoints(); Chapter1 = true; computer = true" ui-sref="story.chapter1({option: 'computer'})">go online</a> to research possible careers?
 
   </h3>
 
