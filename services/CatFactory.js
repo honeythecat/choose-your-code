@@ -46,7 +46,23 @@ catCoder.factory('CatFactory', function CatFactory() {
     factory.username = null;
     // console.log(factory.user);
     return newUser;
+
   };
+
+  factory.addPoints = function() {
+    var player = factory.user[0]
+    userPoints = player.points;
+    userPoints += 100;
+    return userPoints;
+  }
+
+  factory.subtractPoints = function() {
+    var player = factory.user[0]
+    userPoints = player.points;
+    userPoints -= 100;
+    return userPoints;
+  }
+
 
   return factory;
 

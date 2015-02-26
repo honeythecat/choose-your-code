@@ -1,9 +1,10 @@
 <h1>Choose your adventure</h1>
 
 <div class="player">
-  <form ng-submit="addUser()" class="form-inline" role="form">
+  <form ng-submit="addUser()" role="form">
     <div class="form-group">
-      <select ng-model="CatFactory.username" class="form-control">
+      <select ng-model="CatFactory.username" class="form-control" required>
+        <option value="" disabled>Pick your name</option>
         <option value="Bob">Bob</option>
         <option value="Bob2">Bob2</option>
         <option value="Bob3">Bob3</option>
@@ -12,14 +13,16 @@
       </select>
     </div>
     <div class="form-group">
-      <select ng-model="CatFactory.gender" class="form-control">
+      <select ng-model="CatFactory.gender" class="form-control" required>
+        <option value="" disabled>Pick your gender</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Other">Other</option>
       </select>
     </div>
     <div class="form-group">
-      <select ng-model="CatFactory.userSpirit" class="form-control">
+      <select ng-model="CatFactory.userSpirit" class="form-control" required>
+        <option value="" disabled>Pick your spirit cat</option>
         <option value="Feral">Feral Cat</option>
         <option value="Fancy">Fancy Cat</option>
         <option value="Nyan">Nyan Cat</option>
@@ -28,14 +31,16 @@
       </select>
     </div>
     <div class="form-group">
-      <select ng-model="CatFactory.userType" class="form-control">
+      <select ng-model="CatFactory.userType" class="form-control" required>
+        <option value="" disabled>Pick your typing style</option>
         <option value="Hunt">Hunt and Peck</option>
         <option value="Touch">Touch Type</option>
         <option value="Bang">Banging Head Against Keyboard</option>
       </select>
     </div>
     <div class="form-group">
-      <select ng-model="CatFactory.userOs" class="form-control">
+      <select ng-model="CatFactory.userOs" class="form-control" required>
+        <option value="" disabled>Pick your operating system</option>
         <option value="Windows">Windows</option>
         <option value="Mac">Mac</option>
         <option value="Linux">Linux</option>
@@ -48,6 +53,3 @@
 </div>
 
 <hr>
-
-<h1>Your name: {{user.name}} </h1>
-<h1>Current point total: {{user.points}}</h1>

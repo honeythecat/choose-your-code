@@ -7,11 +7,33 @@ catCoder.config(function($stateProvider) {
     controller: "UserCtrl"
   });
 
-  $stateProvider.state('user', {
-    url: "/user",
-    templateUrl: "partials/user.html",
+  $stateProvider.state('story', {
+    url: "/story",
+    templateUrl: "partials/story.html",
     controller: "UserCtrl"
   });
+
+  $stateProvider.state('story.chapter1', {
+    url: "/chapter1/:option",
+    templateUrl: "partials/story.chapter1.html",
+    controller: "UserCtrl"
+  });
+
+  $stateProvider.state('story.chapter2', {
+    url: "/chapter2/:option",
+    templateUrl: "partials/story.chapter2.html",
+    controller: "UserCtrl"
+  });
+
+
+  //
+  // $stateProvider.state('chapters', {
+  //   url: "/chapters.optio",
+  //   templateUrl: "partials/chapters.html",
+  //   controller: "UserCtrl"
+  // });
+  //
+  // $stateProvider.state('chapters.options')
 
 
 
