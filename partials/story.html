@@ -3,11 +3,79 @@
   <h1>Current point total: {{user.points}}</h1>
 </div>
 
-<div ng-hide="Chapter1">
-  <h3>You look around the room, unsure of what your future holds. What you do know is what is you are hungry, poor, and bored. You have an empty kitchen with ketchup in the fridge, a laptop with little battery life, stolen wifi, and a bank account that is three dollars away from being overdrawn. Do you: <a ng-click="subtractPoints(); Chapter1 = true; kitchen = true" ui-sref="story.chapter1({option: 'kitchen'})">Go to the kitchen </a> and make ketchup soup or <a ng-click="addPoints(); Chapter1 = true; computer = true" ui-sref="story.chapter1({option: 'computer'})">go online</a> to research possible careers?
-
+<div class="beginning" ng-show="beg" ng-hide="Chapter1">
+  <h3>You look around the room, unsure of what your future holds. What you do know is what is you are hungry, poor, and bored. You have an empty kitchen with ketchup in the fridge, a laptop with little battery life, stolen wifi, and a bank account that is three dollars away from being overdrawn. Do you: <a ng-click="subtractPoints(); Chapter1 = true; kitchen = true">Go to the kitchen </a> and make ketchup soup or <a ng-click="addPoints(); Chapter1 = true; computer = true">go online</a> to research possible careers?
   </h3>
+</div>
+
+<div class="1" ng-hide="Chapter2">
+
+  <div ng-show="kitchen">
+    <h3> go to the kitchen - make the soup or cry on the floor <a ng-click="subtractPoints(); Chapter2 = true; soup = true" >make soup </a>
+    <a ng-click="addPoints(); Chapter2 = true; cry = true" >cry</a>
+    </h3>
+  </div>
+
+  <div ng-show="computer">
+    <h3>go on the computer- go to reddit or github <a  href="http://www.reddit.com/r/ProgrammerHumor/">reddit </a>
+    <a ng-click="addPoints(); Chapter2 = true; git = true" >git</a>
+    </h3>
+  </div>
 
 </div>
 
-<div ui-view></div>
+<div class="2" ng-hide="Chapter3" ng-show="Chapter2">
+
+  <div ng-show="soup">
+    <h3>eat soup and feel refreshed, get on your computer<a ng-click="addPoints(); Chapter2 = false; computer = true; soup=false; kitchen= false">computer </a>
+    </h3>
+  </div>
+
+  <div ng-show="cry">
+    <h3> crying <a ng-click="subtractPoints(); Chapter3 = true; option1 = true" >option one </a>
+    <a ng-click="addPoints(); Chapter3 = true; option2 = true" >option 2</a>
+    </h3>
+  </div>
+
+  <div ng-show="git">
+    <h3>open an old repository -clean up code or break code <a ng-click="subtractPoints(); Chapter3 = true; break = true" >break </a>
+    <a ng-click="addPoints(); Chapter3 = true; clean = true" >clean</a>
+    </h3>
+  </div>
+</div>
+
+<div class="3" ng-show="Chapter3" ng-hide="Chapter4">
+
+  <div ng-show="break">
+    <h3>commit broken code yes or no<a ng-click="subtractPoints(); Chapter4 = true; commitBroken = true" >commit break </a>
+    <a ng-click="addPoints(); Chapter4 = true; doNotCommitBroken = true" >don't commit break</a>
+    </h3>
+  </div>
+
+  <div ng-show="clean">
+    <h3>commit clean code yes or no<a ng-click="subtractPoints(); Chapter4 = true; doNotCommitClean = true" >do not commit clean </a>
+    <a ng-click="addPoints(); Chapter4 = true; commitClean = true" >commit clean</a>
+    </h3>
+  </div>
+</div>
+
+<div class="4" ng-show="Chapter4">
+
+  <div ng-show="doNotCommitBroken">
+    <h3>decide that starting a paint-your-own-pottery shop is the best answer.</h3>
+  </div>
+
+  <div ng-show="commitBroken || doNotCommitClean">
+    <h3>you realize that you have made a grave mistake and <a ng-click="subtractPoints(); beg = true; Chapter4 = false">go to bed only to realize...</a>
+  </div>
+
+  <!-- <div ng-show="doNotCommitClean">
+    <h3>commit broken code yes or no<a ng-click="subtractPoints(); Chapter5 = true; commitBroken = true" >commit break </a>
+    <a ng-click="addPoints(); Chapter5 = true; doNotCommitBroken = true" >don't commit break</a>
+    </h3>
+  </div> -->
+
+  <div ng-show="commitClean">
+    <h3>you commit your clean code, apply to epicodus, become a master programmer, and complain about donut boxes.</h3>
+  </div>
+</div>

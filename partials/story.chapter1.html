@@ -1,8 +1,14 @@
 
 <div ng-show="kitchen">
-  kitchen
+  <h3> go to the kitchen - make the soup or cry on the floor <a ng-click="subtractPoints(); Chapter2 = true; soup = true" ui-sref="story.chapter2({option: 'soup'})">make soup </a>
+  <a ng-click="addPoints(); Chapter2 = true; cry = true" ui-sref="story.chapter2({option: 'cry'})">cry</a>
+  </h3>
 </div>
 
 <div ng-show="computer">
-  computer
+  <h3>go on the computer- go to reddit or stackoverflow <a  href="http://www.reddit.com/r/ProgrammerHumor/">reddit </a>
+  <a ng-click="addPoints(); Chapter2 = true; stack = true" ui-sref="story.chapter2({option: 'stackoverflow'})">stack</a>
+  </h3>
 </div>
+
+<div ui-view></div>
