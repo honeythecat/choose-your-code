@@ -1,7 +1,7 @@
 <h1>Choose your adventure</h1>
 
 <div class="player">
-  <form ng-submit="addUser()" role="form">
+  <form ng-submit="addUser(); story = true" role="form">
     <div class="form-group">
       <select ng-model="CatFactory.username" class="form-control" required>
         <option value="" disabled>Pick your name</option>

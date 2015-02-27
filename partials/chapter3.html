@@ -1,0 +1,14 @@
+<div class="3" ng-show="Chapter3" ng-hide="Chapter4">
+
+  <div ng-show="break">
+    <h3>commit broken code yes or no<a ng-click="subtractPoints(); Chapter4 = true; commitBroken = true" >commit break </a>
+    <a ng-click="addPoints(); Chapter4 = true; doNotCommitBroken = true" >don't commit break</a>
+    </h3>
+  </div>
+
+  <div ng-show="clean">
+    <h3>commit clean code yes or no<a ng-click="subtractPoints(); Chapter4 = true; doNotCommitClean = true" >do not commit clean </a>
+    <a ng-click="addPoints(); Chapter4 = true; commitClean = true" >commit clean</a>
+    </h3>
+  </div>
+</div>

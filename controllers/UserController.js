@@ -3,7 +3,7 @@ catCoder.controller("UserCtrl", function UserCtrl($scope, $state, CatFactory) {
   $scope.user = CatFactory.user[0];
   $scope.addUser = function() {
     $scope.user = CatFactory.buildUser();
-    $state.go("story");
+    $state.go("story.beginning");
   }
   $scope.addPoints = function() {
     $scope.user.points = CatFactory.addPoints();

@@ -1,0 +1,19 @@
+<div class="2" ng-hide="Chapter3" ng-show="Chapter2">
+
+  <div ng-show="soup">
+    <h3>eat soup and feel refreshed, get on your computer<a ng-click="addPoints(); Chapter2 = false; computer = true; soup=false; kitchen= false">computer </a>
+    </h3>
+  </div>
+
+  <div ng-show="cry">
+    <h3> find a bottle of peach schnapps and go to bed or stop crying and look at funny cat pictures<a ng-click="subtractPoints(); Chapter3 = true; schnapps = true" > schnapps</a>
+    <a ng-click="subtractPoints(); Chapter3 = true; beg = true" >bed</a>
+    </h3>
+  </div>
+
+  <div ng-show="git">
+    <h3>open an old repository -clean up code or break code <a ng-click="subtractPoints(); Chapter3 = true; break = true" >break </a>
+    <a ng-click="addPoints(); Chapter3 = true; clean = true" >clean</a>
+    </h3>
+  </div>
+</div>

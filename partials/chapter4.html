@@ -1,0 +1,20 @@
+<div class="4" ng-show="Chapter4">
+
+  <div ng-show="doNotCommitBroken">
+    <h3>decide that starting a paint-your-own-pottery shop is the best answer.</h3>
+  </div>
+
+  <div ng-show="commitBroken || doNotCommitClean">
+    <h3>you realize that you have made a grave mistake and <a ng-click="subtractPoints(); beg = true; Chapter4 = false">go to bed only to realize...</a>
+  </div>
+
+  <!-- <div ng-show="doNotCommitClean">
+    <h3>commit broken code yes or no<a ng-click="subtractPoints(); Chapter5 = true; commitBroken = true" >commit break </a>
+    <a ng-click="addPoints(); Chapter5 = true; doNotCommitBroken = true" >don't commit break</a>
+    </h3>
+  </div> -->
+
+  <div ng-show="commitClean">
+    <h3>you commit your clean code, apply to epicodus, become a master programmer, and complain about donut boxes.</h3>
+  </div>
+</div>
